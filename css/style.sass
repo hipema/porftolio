@@ -1,0 +1,392 @@
+$primary-color: #fb5111
+$primary-color-transparencia: rgba($primary-color, 0.4)
+$punto-ruptura1: 760px
+$punto-ruptura2: 1024px
+    
+=cabecera()
+    background-image: url("../img/fondo-presentacion-movil.jpg")
+    background-size: cover
+    
+*
+    font-family: 'Roboto', sans-serif
+    scroll-behavior: smooth
+
+main
+    background-image: url("../img/fondo-pagina.jpg")
+    background-size: cover
+
+h1
+    display: none
+
+.cabecera
+    @include cabecera()
+    height: 650px
+    @media screen and ( min-height: 650px )
+        height: 100vh
+    @media screen and ( min-width: $punto-ruptura1 )
+        height: auto
+
+.capa-oscura
+    background: rgba(#000000, 0.6)
+    width: 100%
+
+.cabecera-no-movil
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: grid
+        grid-template-columns: 2fr 1fr
+
+.logo
+    text-align: center
+    @media screen and ( min-width: $punto-ruptura1 )
+        text-align: left
+    img
+        width: 85%
+        margin-top: 20px
+        margin-bottom: 10px
+        @media screen and ( min-width: $punto-ruptura1 )
+            max-width: 375px
+            margin-left: 20px
+
+.redes-cabecera
+    a
+        text-decoration: none
+        color: $primary-color-transparencia
+        font-size: 4rem
+        @media screen and ( min-width: $punto-ruptura1 )
+            font-size: 2.5rem
+        &:hover
+            color: $primary-color
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: grid
+        grid-template-columns: 1fr 4fr    
+
+.contacto-cabecera
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    text-align: center
+
+.telefono-cabecera, .email-cabecera
+    div:last-child
+        a
+            font-size: 1rem
+            color: white
+
+.telefono-cabecera
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: none
+.email-cabecera
+    
+    @media screen and ( min-width: $punto-ruptura1 )
+        align-self: center;
+        div:last-child
+            display: none
+
+.resto-redes
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    text-align: center
+    width: 80%;
+    margin: auto;
+
+h2
+    font-family: 'Special Elite', cursive
+    font-weight: 10
+    color: #ffffff
+    margin: 0
+    padding: 15px
+h2::first-letter
+    color: $primary-color
+
+.presentacion-movil
+    text-align: center
+    background-image: url('../img/fondo-presentacion-movil.jpg')
+    padding-bottom: 5px
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: none
+    img
+        max-width: 60%
+        max-height: 30vh
+        margin: 20px
+
+    div:last-child
+        background: $primary-color-transparencia
+        width: 60%
+        margin: 20px auto
+        margin-top: 0px
+        padding: 20px
+        border-radius: 0 20px
+        span
+            text-transform: uppercase
+            font-weight: 600
+            font-size: 1.5rem
+
+.menu-tablet-escritorio, .presentacion
+    display: none
+
+.presentacion
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: flex
+        text-align: end
+        background-image: url('../img/fondo-presentacion-movil.jpg')
+        background-size: cover
+        justify-content: center
+        padding: 20px
+        img
+            width: 250px
+
+        div:last-child
+            background: $primary-color-transparencia
+            width: 250px
+            margin: 20px
+            margin-top: 0px
+            padding: 20px
+            border-radius: 0 20px
+            align-self: center
+            text-align: center
+            @media screen and ( min-width: $punto-ruptura2 )
+                margin: 0
+            span
+                text-transform: uppercase
+                font-weight: 600
+                font-size: 1.5rem
+    @media screen and ( min-width: $punto-ruptura2 )
+        display: block
+        text-align: center
+
+.barra-seccion
+    height: 1.5rem
+    background: black
+
+section
+    header
+        @include cabecera()
+
+.contenedor
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    text-align: center
+    align-items: center
+    img
+        width: 60%
+        margin: 5px
+    
+h3
+    margin-left: 20px
+    text-transform: uppercase
+    margin-bottom: 5px
+
+
+.caja-cursos
+    width: 95%
+    height: 95%
+    border: 3px solid $primary-color-transparencia
+    margin: auto
+    margin-top: 10px
+    border-radius: 21px
+
+section
+    @media screen and ( min-width: $punto-ruptura1 )
+        padding-bottom: 10px
+    .caja-cursos:last-child
+        margin-bottom: 10px
+        
+
+.articulo-basico
+    text-align: justify
+    margin: 20px
+
+.aptitudes
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+
+.presentacion-aptitudes
+    @media screen and ( min-width: $punto-ruptura2 )
+        display: grid
+        grid-template-columns: 1fr 4fr
+
+.formacion
+    @media screen and ( min-width: $punto-ruptura2 )
+        display: grid
+        grid-template-columns: 1fr 1fr
+
+.imagen-proyecto
+        width: 80%
+        border-radius: 20px
+        border: 4px solid $primary-color-transparencia
+
+.proyecto-individual
+    text-align: center
+
+.conjunto-proyectos
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        @media screen and ( min-width: $punto-ruptura2 )
+            grid-template-columns: repeat(3, 1fr)
+
+details
+    margin-bottom: 10px
+    div
+        background-color: $primary-color-transparencia
+        padding: 10px
+
+.descripcion-proyecto
+    text-align: justify        
+
+.tecnologias
+    img
+        height: 45px
+
+#otros-datos
+    article:last-child
+        margin-bottom: 0
+        padding-bottom: 0
+        p
+            padding-bottom: 16px
+            margin-bottom: 0
+
+
+.seccion-contacto
+    display: none
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: block
+
+.redes-contacto
+    font-size: 1.5rem
+
+.cabecera-contacto
+    text-align: center
+    h2
+        color: black
+        font-weight: bold
+
+.contacto, .resto-redes-contacto, .telefono-contacto, .email-contacto
+    text-align: left
+    font-size: 2rem
+    a
+        text-decoration: none
+        color: black
+    a:hover
+        color: $primary-color
+
+.contacto 
+    @media screen and ( min-width: 810px )
+        display: flex
+        justify-content: center
+        div
+            display: inline-flex
+            margin: 10px
+
+footer
+    @include cabecera()
+    color: #ffffff
+    text-align: center
+    img
+        padding: 10px
+        width: 80%
+        @media screen and ( min-width: 760px )
+            max-width: 375px
+
+.seccion-footer
+    text-align: justify
+    margin: 20px
+    a
+        color: #ffffff
+        font-size: 1.1rem
+        @media screen and ( min-width: $punto-ruptura2 )
+            font-size: 1.5rem
+    a:hover
+        color: $primary-color-transparencia
+    ul
+        list-style: none
+        padding: 0
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 25px
+
+.copyright
+    padding: 10px
+    font-size: 0.8rem
+
+// Estilos Menú
+#barra-menu
+    display: block
+    font-size: 1.1rem
+    font-weight: bold
+    background: black
+
+    .bt-menu
+        display: block
+        padding: 5px
+        color: #ffffff
+        text-decoration: none
+        font-weight: bold
+        font-size: 25px
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        margin-left: 5%
+    
+    @media screen and ( min-width:  $punto-ruptura1)
+        display: none
+        
+#menu 
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: none
+    width: 50%
+    left: -100%
+    margin: 0
+    position: absolute
+    background-color: rgba($primary-color, 0.6)
+    color: black
+    ul
+        li 
+            display: block
+            float: none
+            border-bottom: 1px solid rgba($primary-color, 0.6)
+            a
+                color: black
+                padding: 10px
+                display: block
+                font-weight: bold
+                text-decoration: none
+                &:hover
+                    background-color: rgba(#FFFFFF, 0.4)
+            span 
+	            margin-right: 10px
+
+.menu-tablet-escritorio
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: block
+        background: #000000
+        font-weight: 500
+        
+        ul
+            list-style: none
+            margin: 0
+            text-align: center
+
+            li
+                display: inline-block
+                a
+                    color: #ffffff
+                    padding: 10px
+                    display: block
+                    font-weight: bold
+                    text-decoration: none
+                
+                    &:hover
+                        background-color: rgba(#FFFFFF, 0.4)
+                        color: black
+    
+.volver-arriba
+    position: fixed
+    bottom: 10px
+    right: 10px
+    a
+        text-decoration: none
+        font-size: 36px
+        color: #fb5111
+        text-shadow: 1px 1px 1px #000
