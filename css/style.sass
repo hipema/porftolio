@@ -262,21 +262,35 @@ details
         font-weight: bold
 
 .contacto, .resto-redes-contacto, .telefono-contacto, .email-contacto
-    text-align: left
-    font-size: 2rem
+    // text-align: left
     a
         text-decoration: none
         color: black
     a:hover
         color: $primary-color
 
-.contacto 
+.contacto
+    text-align: center
+    font-size: 2rem
+    margin-bottom: 20px
     @media screen and ( min-width: 810px )
         display: flex
         justify-content: center
         div
             display: inline-flex
             margin: 10px
+
+.resto-redes-contacto
+    @media screen and ( min-width: $punto-ruptura1 )
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        justify-items: center
+        max-width: 750px
+        margin: auto
+        div
+            width: 100%
+            text-align: left
+            
 
 footer
     @include cabecera()
